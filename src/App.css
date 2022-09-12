@@ -12,7 +12,7 @@ p {
 }
 
 .bg {
-  background: #348cb2 url("images/bg.jpg") bottom left;
+  background: #348cb2 url("./images/bg.jpg") bottom left;
   backface-visibility: hidden;
   background-repeat: repeat-x;
   min-height: 100vh;
