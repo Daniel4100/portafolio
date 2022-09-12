@@ -1,0 +1,45 @@
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.app{
+  overflow: hidden;
+}
+
+.bg {
+  background: #348cb2 url("images/bg.jpg") bottom left;
+  backface-visibility: hidden;
+  background-repeat: repeat-x;
+  min-height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  -moz-animation: bg 60s linear infinite;
+  -webkit-animation: bg 60s linear infinite;
+  -ms-animation: bg 60s linear infinite;
+  animation: bg 60s linear infinite;
+  width: 6750px;
+  z-index: -1;
+  background-size: 1250px auto;
+}
+
+@keyframes bg {
+  0% {
+    -moz-transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    -moz-transform: translate3d(-2250px, 0, 0);
+    -webkit-transform: translate3d(-2250px, 0, 0);
+    -ms-transform: translate3d(-2250px, 0, 0);
+    transform: translate3d(-2250px, 0, 0);
+  }
+}
