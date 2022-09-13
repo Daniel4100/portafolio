@@ -31,7 +31,42 @@ p {
   animation: bg 60s linear infinite;
   width: 6750px;
   z-index: -1;
-  background-size: 1250px auto;
+  background-size: 750px auto;
+}
+
+.icons-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  width: 100%;
+  margin-top: 50px;
+  list-style: none;
+  color: #fff;
+  font-size: 2em;
+}
+.icons-container a{
+  color: #fff;
+  
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.icon{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.137);
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  transition: all 0.3s ease;
+}
+
+.icon:hover{
+  transform: scale(1.1);
 }
 
 @keyframes bg {
@@ -47,5 +82,31 @@ p {
     -webkit-transform: translate3d(-2250px, 0, 0);
     -ms-transform: translate3d(-2250px, 0, 0);
     transform: translate3d(-2250px, 0, 0);
+  }
+}
+
+/* Language: css media for cellphone */
+
+@media (min-width: 600px) {
+  .bg {
+    background-size: 950px auto;
+  }
+}
+@media (min-width: 960px) {
+  .bg {
+    background-size: 1350px auto;
+  }
+}
+@media (max-height: 600px) {
+  .bg {
+    background-size: 450px auto;
+  }
+}
+@media (min-width: 3000px) {
+  .bg {
+    background-size: 3000px auto;
+  }
+  body{
+    font-size: 4rem;
   }
 }
