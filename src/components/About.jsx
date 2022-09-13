@@ -46,10 +46,53 @@ const About = () => {
             </a>
           </div>
         </div>
-        <div className="about-img">
-          {/* <img src="https://i.ibb.co/7bQQYkX/IMG-20210410-134247.jpg" alt="Jhener Daniel" /> */}
+        <div className="content">
+          {/* zona de habilidades web skills */}
+          <h2 className="title">Skills</h2>
+          <div className="skills">
+            <div className="skill">
+              <i className="fa-brands fa-html5"></i>
+              <p>HTML5</p>
+            </div>
+            <div className="skill">
+              <i className="fa-brands fa-css3-alt"></i>
+              <p>CSS3</p>
+            </div>
+            <div className="skill">
+              <i className="fa-brands fa-js-square"></i>
+              <p>JavaScript</p>
+            </div>
+            <div className="skill">
+              <i className="fa-brands fa-react"></i>
+              <p>React</p>
+            </div>
+            <div className="skill">
+              <img src="../public/vite.svg" alt="" />
+              <p>Vite</p>
+            </div>
+            <div className="skill">
+              <i className="fa-brands fa-git-alt"></i>
+              <p>Git</p>
+            </div>
+            <div className="skill">
+              <i className="fa-brands fa-github"></i>
+              <p>Git Hub</p>
+            </div>
+            <div className="skill">
+              <i className="fa-brands fa-npm"></i>
+              <p>NPM</p>
+            </div>
+            <div className="skill">
+              <img src="../public/images/redux.svg" alt="" />
+              <p>Redux Toolkit</p>
+            </div>
+            <div className="skill">
+              <img src="../public/images/framer.svg" alt="" />
+              <p>Framer Motion</p>
+            </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

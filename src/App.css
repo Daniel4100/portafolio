@@ -192,6 +192,36 @@ a{
   max-width: 300px;
   justify-content: space-around;
 }
+.skills{
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 600px;
+}
+.skill{
+  background-color: rgba(255, 255, 255, 0.171);
+  padding: .5em;
+  border-radius: 5px;
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  transition: transform 0.3s ease;
+}
+.skill:hover{
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.185);
+}
+.skill i,img{
+  font-size: 2rem;
+  height: 30px;
+  width: 30px;
+}
 
 @media (min-width: 600px) {
   .bg {
