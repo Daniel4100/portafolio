@@ -67,7 +67,7 @@ const About = () => {
               <p>React</p>
             </div>
             <div className="skill">
-              <img src="../public/vite.svg" alt="" />
+              <img src="./vite.svg" alt="" />
               <p>Vite</p>
             </div>
             <div className="skill">
@@ -83,11 +83,11 @@ const About = () => {
               <p>NPM</p>
             </div>
             <div className="skill">
-              <img src="../public/images/redux.svg" alt="" />
+              <img src="./images/redux.svg" alt="" />
               <p>Redux Toolkit</p>
             </div>
             <div className="skill">
-              <img src="../public/images/framer.svg" alt="" />
+              <img src="./images/framer.svg" alt="" />
               <p>Framer Motion</p>
             </div>
         </div>
