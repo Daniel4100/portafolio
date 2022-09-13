@@ -223,6 +223,25 @@ a{
   width: 30px;
 }
 
+.isGame-button{
+  border: 1px solid white;
+  background: rgba(255, 255, 255, 0.507);
+  padding: .5em;
+  margin-bottom: 2em;
+}
+
+.skill.down {
+  background: #fafafa42;
+}
+
+.skill.up {
+  background: #b5f098;
+}
+
+.skill.selected {
+  background: #ffbf1c;
+}
+
 @media (min-width: 600px) {
   .bg {
     background-size: 950px auto;
