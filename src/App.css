@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
+
 body,
 h1,
 h2,
@@ -5,6 +7,10 @@ h3,
 p {
   margin: 0;
   padding: 0;
+}
+body{
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #fff;
 }
 
 .app{
@@ -34,6 +40,25 @@ p {
   background-size: 750px auto;
 }
 
+.overlay {
+  -moz-animation: overlay 1.5s 1.5s forwards;
+  -webkit-animation: overlay 1.5s 1.5s forwards;
+  -ms-animation: overlay 1.5s 1.5s forwards;
+  animation: overlay 1.5s 1.5s forwards;
+  background-attachment: fixed, fixed;
+  background-image: url("../public/images/overlay-pattern.png"), url("../public/images/overlay.svg");
+  background-position: top left, center center;
+  background-repeat: repeat, no-repeat;
+  background-size: auto, cover;
+  height: 100%;
+  left: 0;
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
 .icons-container{
   display: flex;
   justify-content: center;
@@ -42,7 +67,7 @@ p {
   width: 100%;
   margin-top: 50px;
   list-style: none;
-  color: #fff;
+  
   font-size: 2em;
 }
 .icons-container a{
@@ -56,17 +81,18 @@ p {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.137);
+  background: rgba(255, 255, 255, 0);
+  padding: .6rem;
   border: 1px solid white;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
   transition: all 0.3s ease;
 }
 
 .icon:hover{
   transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.185);
 }
 
 @keyframes bg {
@@ -83,6 +109,14 @@ p {
     -ms-transform: translate3d(-2250px, 0, 0);
     transform: translate3d(-2250px, 0, 0);
   }
+}
+
+.name{
+  font-size: 4rem;
+
+}
+.subtitle{
+  font-size: 1.4rem;
 }
 
 /* Language: css media for cellphone */

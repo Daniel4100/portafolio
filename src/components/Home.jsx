@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
+    <>
+    <h2 className="name">Jhener Daniel</h2>
+    <p className="subtitle">Front-end  •  Web Developer</p>
     <ul className="icons-container">
       <li className="icon"><Link to={'/about'} >
         <i class="fa-solid fa-user"></i></Link>
@@ -19,7 +22,7 @@ const Home = () => {
       <li className="icon">
         <i class="fa-brands fa-linkedin"></i>
       </li>
-    </ul>
+    </ul></>
   );
 };
 

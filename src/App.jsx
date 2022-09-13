@@ -13,6 +13,7 @@ const App = () => {
   return (
     <div className='app'>
       <div className="bg"></div>
+      <div className="overlay"></div>
       
       <Routes>
         <Route path="/" element={<Home />} />
