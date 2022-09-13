@@ -61,7 +61,7 @@ body{
   background-position: top left, center center;
   background-repeat: repeat, no-repeat;
   background-size: auto, cover;
-  min-height: 100%;
+  min-height: 100vh;
   left: 0;
   opacity: 1;
   position: fixed;
