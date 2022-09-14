@@ -12,7 +12,8 @@ const About = () => {
 
   const selectCard = (e, index) => {
     console.log(e);
-    skillsData[index].status = "selected";
+    if (skillsData[index].status !== 'up') {
+      skillsData[index].status = "selected";
     setSkillsData([...skillsData]);
     if (prevIndexCard === -1) {
       setPrevIndexCard(index);
@@ -20,6 +21,8 @@ const About = () => {
       // En la segunda tarjeta seleccionada
       validateCards(index);
     }
+    }
+    
   };
 
   const validateCards = (newIndexCard) => {
