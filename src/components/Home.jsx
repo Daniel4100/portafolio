@@ -20,9 +20,13 @@ const Home = () => {
         <li className="icon">
           <i className="fa-solid fa-file"></i>
         </li>
+
         <li className="icon">
-          <i className="fa-solid fa-briefcase"></i>
+          <Link to={"/portafolio"}>
+            <i className="fa-solid fa-briefcase"></i>
+          </Link>
         </li>
+
         <li className="icon">
           <a href="https://www.linkedin.com/in/jhener-daniel/" target="_blanck">
             <i className="fa-brands fa-linkedin"></i>
@@ -34,3 +38,4 @@ const Home = () => {
 };
 
 export default Home;
+

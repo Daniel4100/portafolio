@@ -4,6 +4,7 @@ import './App.css'
 import Home from './components/Home'
 import About from './components/About'
 import Contact from './components/Contact'
+import Portafolio from './components/Portafolio'
 
 const App = () => {
   //portfolio whit routes and components
@@ -18,7 +19,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/portafolio" element={<Portafolio />} />
 
       </Routes>
       
