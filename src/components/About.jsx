@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import gameData from "./game.jsx";
 
 const About = () => {
@@ -11,8 +12,9 @@ const About = () => {
   console.log(skillsData);
 
   const selectCard = (e, index) => {
+    
     console.log(e);
-    if (skillsData[index].status !== 'up') {
+    if (skillsData[index].status !== 'selected' && skillsData[index].status !== 'up') {
       skillsData[index].status = "selected";
     setSkillsData([...skillsData]);
     if (prevIndexCard === -1) {
@@ -45,6 +47,7 @@ const About = () => {
 
   return (
     <div className="about">
+      
       <div className="about-container">
         <div className="content">
           <h2 className="title">About me</h2>
@@ -76,7 +79,7 @@ const About = () => {
         <div className="content">
           {/* zona de habilidades web skills */}
           <h2 className="title">Skills</h2>
-          <button className="isGame-button" onClick={isGameToggle}>{isGame ? 'cerrar' : 'Quieres Jugar un Juego?' }</button>
+          <button className="isGame-button" onClick={isGameToggle}>{isGame ? 'cerrar' : 'Quieres Jugar?' }</button>
           {isGame && <h2 className="title">Juego de Memoria</h2>}
           <div className="skills">
             {isGame ? (
@@ -97,43 +100,43 @@ const About = () => {
                 ))}</div>
             ) : (
               <>
-                <div className="skill">
+                <div className="skill html">
                   <i className="fa-brands fa-html5"></i>
                   <p>HTML5</p>
                 </div>
-                <div className="skill">
+                <div className="skill css">
                   <i className="fa-brands fa-css3-alt"></i>
                   <p>CSS3</p>
                 </div>
-                <div className="skill">
+                <div className="skill js">
                   <i className="fa-brands fa-js-square"></i>
                   <p>JavaScript</p>
                 </div>
-                <div className="skill">
+                <div className="skill react">
                   <i className="fa-brands fa-react"></i>
                   <p>React</p>
                 </div>
-                <div className="skill">
+                <div className="skill vite">
                   <img src="./vite.svg" alt="" />
                   <p>Vite</p>
                 </div>
-                <div className="skill">
+                <div className="skill git">
                   <i className="fa-brands fa-git-alt"></i>
                   <p>Git</p>
                 </div>
-                <div className="skill">
+                <div className="skill github">
                   <i className="fa-brands fa-github"></i>
                   <p>Git Hub</p>
                 </div>
-                <div className="skill">
+                <div className="skill npm">
                   <i className="fa-brands fa-npm"></i>
                   <p>NPM</p>
                 </div>
-                <div className="skill">
+                <div className="skill redux">
                   <img src="./images/redux.svg" alt="" />
                   <p>Redux Toolkit</p>
                 </div>
-                <div className="skill">
+                <div className="skill framer">
                   <img src="./images/framer.svg" alt="" />
                   <p>Framer Motion</p>
                 </div>
@@ -157,7 +160,9 @@ const About = () => {
             </a>
           </div>
         </div>
-        <div>{}</div>
+        <Link to="/" className="icon home-icon">
+        <i class="fa-solid fa-house"></i>
+      </Link>
       </div>
     </div>
   );

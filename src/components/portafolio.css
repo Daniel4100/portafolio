@@ -15,9 +15,9 @@
 }
 
 .proyectos {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: auto;
-  margin-top: 100px;
+  margin-top: 50px;
   perspective: 1000px;
   display: flex;
   justify-content: center;
@@ -34,7 +34,7 @@
 }
 
 .card {
-  width: 350px;
+  width: 250px;
   height: 400px;
   position: relative;
   transform-style: preserve-3d;
@@ -87,13 +87,13 @@
 }
 
 .body__card_back {
-  padding: 40px;
+  padding: 40px 10px 10px 10px;
   text-align: center;
   transform: translateZ(60px);
 }
 
 .body__card_back p {
-  margin-top: 30px;
+  margin-top: 10px;
   font-size: 18px;
 }
 
