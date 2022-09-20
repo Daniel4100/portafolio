@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import gameData from "./game.jsx";
 
-const About = () => {
+const About = ({isDark, handleDark }) => {
   const [skillsData, setSkillsData] = useState(
     gameData.sort(() => Math.random() - 0.5)
   );
@@ -12,19 +12,19 @@ const About = () => {
   console.log(skillsData);
 
   const selectCard = (e, index) => {
-    
-    console.log(e);
-    if (skillsData[index].status !== 'selected' && skillsData[index].status !== 'up') {
+    if (
+      skillsData[index].status !== "selected" &&
+      skillsData[index].status !== "up"
+    ) {
       skillsData[index].status = "selected";
-    setSkillsData([...skillsData]);
-    if (prevIndexCard === -1) {
-      setPrevIndexCard(index);
-    } else {
-      // En la segunda tarjeta seleccionada
-      validateCards(index);
+      setSkillsData([...skillsData]);
+      if (prevIndexCard === -1) {
+        setPrevIndexCard(index);
+      } else {
+        // En la segunda tarjeta seleccionada
+        validateCards(index);
+      }
     }
-    }
-    
   };
 
   const validateCards = (newIndexCard) => {
@@ -47,11 +47,23 @@ const About = () => {
 
   return (
     <div className="about">
-      
+      {/* <nav className="about-nav">
+        <div>
+          <h1>JD</h1>
+        </div>
+        <div>
+        <button onClick={handleDark} className="icon">
+          {
+            isDark ? <i class="fa-solid fa-sun"></i> : <i class="fa-solid fa-moon"></i>
+          }
+        </button>
+        </div>
+      </nav> */}
       <div className="about-container">
-        <div className="content">
-          <h2 className="title">About me</h2>
+        <div className="content box1">
+          
           <section className="about-text">
+          
             <p>
               Hola mundo, me llamo Jhener Daniel Calvache Ceballos, soy
               colombiano y soy un desarrollador web Front-end, me gusta la
@@ -74,39 +86,47 @@ const About = () => {
               películas, y escuchar música con programación es lo mejor que hay.
             </p>
           </section>
+          <section className="about-text-rigth">
+            <div className="ball">
+              <h2>About</h2>
+            </div>
+          </section>
         </div>
-        
+
         <div className="content">
           {/* zona de habilidades web skills */}
           <h2 className="title">Skills</h2>
-          <button className="isGame-button" onClick={isGameToggle}>{isGame ? 'cerrar' : 'Quieres Jugar?' }</button>
+          <button className="isGame-button" onClick={isGameToggle}>
+            {isGame ? "cerrar" : "Quieres Jugar?"}
+          </button>
           {isGame && <h2 className="title">Juego de Memoria</h2>}
           <div className="skills">
             {isGame ? (
-              <div className="skills">
-                {
-              skillsData
-                .filter((e) => e !== undefined)
-                .map((e, i) => (
-                  <div
-                    key={e.id}
-                    onClick={() => selectCard(e.status, i)}
-                    className={`skill ${e.status}`}
-                  >
-                    {e.status !== "down" && e.skill}
-                    
-                  </div>
-                  
-                ))}</div>
+              <>
+                {skillsData
+                  .filter((e) => e !== undefined)
+                  .map((e, i) => (
+                    <div
+                      key={e.id}
+                      onClick={() => selectCard(e.status, i)}
+                      className={`skill ${e.status}`}
+                    >
+                      {e.status !== "down" && e.skill}
+                    </div>
+                  ))}
+              </>
             ) : (
               <>
                 <div className="skill html">
-                  <i className="fa-brands fa-html5"></i>
-                  <p>HTML5</p>
+                    <i className="fa-brands fa-html5"></i>
+                    <p>HTML5</p>
                 </div>
                 <div className="skill css">
-                  <i className="fa-brands fa-css3-alt"></i>
-                  <p>CSS3</p>
+                  
+                    <i className="fa-brands fa-css3-alt"></i>
+                    <p>CSS3</p>
+                  
+                  
                 </div>
                 <div className="skill js">
                   <i className="fa-brands fa-js-square"></i>
@@ -161,8 +181,8 @@ const About = () => {
           </div>
         </div>
         <Link to="/" className="icon home-icon">
-        <i class="fa-solid fa-house"></i>
-      </Link>
+          <i class="fa-solid fa-house"></i>
+        </Link>
       </div>
     </div>
   );

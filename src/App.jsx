@@ -1,27 +1,28 @@
 import React, { useState } from "react";
-import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./components/Home";
-import About from "./components/About";
-import Contact from "./components/Contact";
+import AboutOne from "./components/AboutOne";
+import Skills from "./components/Skills";
 import Portafolio from "./components/Portafolio";
+import ParticlesBg from "./components/ParticlesBg";
+
 
 const App = () => {
-  //portfolio whit routes and components
-  const [toglw, setToglw] = useState(false);
+  const [isDark, setIsDark] = useState(false);
 
-  const handleClick = () => setToglw(!toglw);
+  const handleDark = () => setIsDark(!isDark);
   return (
-    <div className="app">
-      <div className="bg"></div>
-      <div className="overlay"></div>
+    <div className={`app ${isDark && "dark"} `}>
       
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/portafolio" element={<Portafolio />} />
-      </Routes>
+      <div className="copBg"><ParticlesBg /></div>
+      <div id="home" className="bg"></div>
+      
+      <div className="overlay"></div>
+      <Home isDark={isDark} handleDark={handleDark} />
+      <AboutOne />
+      <Skills />
+      <Portafolio />
     </div>
   );
 };

@@ -31,7 +31,7 @@ const proyectos = [
     title: 'E-Commerce',
     description: 'tienda virtual de productos de tecnología, puedes agregar productos al carrito, eliminarlos y comprarlos, claro que debes iniciar sesión primero.',
     image: './images/ecommerce.webp',
-    link: 'https://ecommerce-2022.netlify.app/'
+    link: 'https://ecomerce2022.netlify.app/'
   }
 ];
 
