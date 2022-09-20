@@ -31,9 +31,9 @@ const Home = ({ isDark, handleDark }) => {
         </a>
         <button onClick={handleDark} className="icon">
           {isDark ? (
-            <i class="fa-solid fa-sun"></i>
+            <i className="fa-solid fa-sun"></i>
           ) : (
-            <i class="fa-solid fa-moon"></i>
+            <i className="fa-solid fa-moon"></i>
           )}
         </button>
       </div>
@@ -79,13 +79,13 @@ const Home = ({ isDark, handleDark }) => {
             <i className="fa-brands fa-linkedin"></i>
           </a>
         </motion.li>
-        <motion.li key={4} variants={item}>
+        <motion.li key={5} variants={item}>
           <a
             className="icon"
             href=""
             target=""
           >
-            <i class="fa-solid fa-file"></i>
+            <i className="fa-solid fa-file"></i>
           </a>
         </motion.li>
         
