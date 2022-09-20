@@ -26,7 +26,10 @@ const ParticlesBg = () => {
           background: {
             color: "tranparent",
           },
-          fpsLimit: 40,
+          fullScreen: {
+            enable: false,
+          },
+          fpsLimit: 60,
           interactivity: {
             detectsOn: "canvas",
             events: {
@@ -40,7 +43,7 @@ const ParticlesBg = () => {
             number: {
               density: {
                 enable: true,
-                area: 1080,
+                area: 800,
               },
               limit: 0,
               value: 200,
@@ -64,7 +67,7 @@ const ParticlesBg = () => {
             size: {
               random: {
                 enable: true,
-                minimumValue: 0.5,
+                minimumValue: 1,
               },
               value: 1,
             },

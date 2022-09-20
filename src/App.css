@@ -82,6 +82,12 @@ body{
   top: 0;
   z-index: 20;
 }
+#tsparticles canvas{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
 .contactfull{
   position: absolute;
   right: 1em;
@@ -97,11 +103,7 @@ body{
   position: absolute;
   left: 0;
   top: 0;
-  -moz-animation: bg 60s linear infinite;
-  -webkit-animation: bg 60s linear infinite;
-  -ms-animation: bg 60s linear infinite;
-  animation: bg 120s linear infinite;
-  width:7050px;
+  width: 100%;
   z-index: 11;
   background-size: 750px auto;
   background: var(--bgcolor);
