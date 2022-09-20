@@ -1,8 +1,16 @@
 import React from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const Skills = () => {
+  useEffect(() => {
+    AOS.init()
+    AOS.refresh()
+  }, [])
   return (
-    <div className="skills-container">
+    <div data-aos="fade-right" data-aos-anchor-placement="top-center"
+    data-aos-duration="1000"   className="skills-container">
       <section className="skills-section">
         <h1 className="about-title">Habilidades</h1>
         <div className="skills">

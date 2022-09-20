@@ -1,8 +1,18 @@
 import React from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const AboutOne = () => {
+  useEffect(() => {
+    AOS.init()
+    AOS.refresh()
+  }, [])
+  
   return (
-    <div id="about" className="about-conatiner">
+    <div data-aos="fade-up"
+    data-aos-anchor-placement="center-bottom"
+    data-aos-duration="1000"  id="about" className="about-conatiner">
       <section className="about">
         <div className="about-text">
           <h1 className="about-title">Sobre Mi</h1>

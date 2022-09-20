@@ -1,7 +1,24 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
-const Home = ({isDark, handleDark}) => {
+const container = {
+  hidden: { opacity: 1 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: .2,
+      delayChildren: 1,
+    },
+    
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 50 },
+  show: { opacity: 1, y: 0 },
+};
+
+const Home = ({ isDark, handleDark }) => {
   return (
     <div className="home">
       <div className="contactfull">
@@ -13,36 +30,66 @@ const Home = ({isDark, handleDark}) => {
           <i className="fa-brands fa-whatsapp"></i>
         </a>
         <button onClick={handleDark} className="icon">
-        {
-            isDark ? <i class="fa-solid fa-sun"></i> : <i class="fa-solid fa-moon"></i>
-          }
-      </button>
+          {isDark ? (
+            <i class="fa-solid fa-sun"></i>
+          ) : (
+            <i class="fa-solid fa-moon"></i>
+          )}
+        </button>
       </div>
       <h2 className="name">Jhener Daniel</h2>
       <p className="subtitle">Front-end • Web Developer</p>
-      <ul className="icons-container">
-        <a className="icon" href="#about">
-          <i className="fa-solid fa-user"></i>
-        </a>
-        <a
-          className="icon"
-          href="https://github.com/Daniel4100"
-          target="_blanck"
-        >
-          <i className="fa-brands fa-github"></i>
-        </a>
-        <li className="icon">
-          <i className="fa-solid fa-file"></i>
-        </li>
+      <motion.ul
+        transition={{ delay: 2 }}
+        variants={container}
+        initial="hidden"
+        animate="show"
+        className="icons-container"
+      >
+        <motion.li key={0} variants={item}>
+          <a className="icon" href="#about">
+            <i className="fa-solid fa-user"></i>
+          </a>
+        </motion.li>
 
+        <motion.li key={2} variants={item}>
+          <a
+            className="icon"
+            href="https://github.com/Daniel4100"
+            target="_blanck"
+          >
+            <i className="fa-brands fa-github"></i>
+          </a>
+        </motion.li>
+
+        
+
+        <motion.li key={3} variants={item}>
           <a className="icon" href="#portafolio">
             <i className="fa-solid fa-briefcase"></i>
           </a>
+        </motion.li>
 
-          <a className="icon" href="https://www.linkedin.com/in/jhener-daniel/" target="_blanck">
+        <motion.li key={4} variants={item}>
+          <a
+            className="icon"
+            href="https://www.linkedin.com/in/jhener-daniel/"
+            target="_blanck"
+          >
             <i className="fa-brands fa-linkedin"></i>
           </a>
-      </ul>
+        </motion.li>
+        <motion.li key={4} variants={item}>
+          <a
+            className="icon"
+            href=""
+            target=""
+          >
+            <i class="fa-solid fa-file"></i>
+          </a>
+        </motion.li>
+        
+      </motion.ul>
     </div>
   );
 };

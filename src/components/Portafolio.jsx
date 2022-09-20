@@ -1,12 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./portafolio.css";
 import ProyectCard from "./ProyectCard";
 import proyectos from "./proyectos";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const Portafolio = () => {
+  useEffect(() => {
+    AOS.init()
+    AOS.refresh()
+  }, [])
   return (
-    <div id="portafolio" className="portafolio">
+    <div data-aos="fade-left" data-aos-anchor-placement="top-center"
+    data-aos-duration="1000" 
+    id="portafolio" className="portafolio">
       
       <h1 className="about-title">Portafolio</h1>
       <div className="proyectos">
@@ -14,9 +22,7 @@ const Portafolio = () => {
           <ProyectCard key={index} proyecto={proyecto} />
         ))}
       </div>
-      <a href="#home" className="icon home-icon">
-        <i class="fa-solid fa-house"></i>
-      </a>
+      
     </div>
   );
 };
