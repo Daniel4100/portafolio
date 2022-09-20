@@ -67,7 +67,7 @@ const ParticlesBg = () => {
             size: {
               random: {
                 enable: true,
-                minimumValue: 1,
+                minimumValue: 2,
               },
               value: 1,
             },
