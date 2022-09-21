@@ -77,7 +77,11 @@ const Home = ({ isDark, handleDark }) => {
           </a>
         </motion.li>
         <motion.li key={5} variants={item}>
-          <a className="icon" href="" target="">
+          {/* download pdf */}
+          <a className="icon"
+          href="/cv.pdf"
+          target='_blanck'
+          >
             <i className="fa-solid fa-file"></i>
           </a>
         </motion.li>
