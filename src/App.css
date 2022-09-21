@@ -125,6 +125,36 @@ body{
   background-size: 750px auto;
 }
 
+.down{
+  position: absolute;
+  bottom: 1em;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+}
+.down i{
+  font-size: 1.5em;
+  font-weight: 600;
+  color: white;
+  animation: bing 1s infinite;
+}
+@keyframes bing {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 
 
 
@@ -243,6 +273,7 @@ a{
   gap: 1em;
   flex-direction: column;
   max-width: 1350px;
+  height: 100%;
 }
 
 .about-title{

@@ -6,10 +6,9 @@ const container = {
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: .2,
+      staggerChildren: 0.2,
       delayChildren: 1,
     },
-    
   },
 };
 
@@ -62,8 +61,6 @@ const Home = ({ isDark, handleDark }) => {
           </a>
         </motion.li>
 
-        
-
         <motion.li key={3} variants={item}>
           <a className="icon" href="#portafolio">
             <i className="fa-solid fa-briefcase"></i>
@@ -80,16 +77,16 @@ const Home = ({ isDark, handleDark }) => {
           </a>
         </motion.li>
         <motion.li key={5} variants={item}>
-          <a
-            className="icon"
-            href=""
-            target=""
-          >
+          <a className="icon" href="" target="">
             <i className="fa-solid fa-file"></i>
           </a>
         </motion.li>
-        
       </motion.ul>
+      <div className="down">
+        <a href="#about">
+          <i class="fa-solid fa-angles-down"></i>
+        </a>
+      </div>
     </div>
   );
 };

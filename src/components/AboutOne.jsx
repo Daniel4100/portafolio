@@ -10,12 +10,12 @@ const AboutOne = () => {
   }, [])
   
   return (
-    <div data-aos="fade-up"
-    data-aos-anchor-placement="center-bottom"
-    data-aos-duration="1000"  id="about" className="about-conatiner">
+    <div id="about" data-aos="fade-right"
+    data-aos-anchor-placement="top-center"
+    data-aos-duration="1000"  className="about-conatiner">
       <section className="about">
         <div className="about-text">
-          <h1 className="about-title">Sobre Mi</h1>
+          <h1   className="about-title">Sobre Mi</h1>
           <div>
             <p>
               Hola mundo, me llamo Jhener Daniel Calvache Ceballos, soy

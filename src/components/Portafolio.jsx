@@ -12,7 +12,7 @@ const Portafolio = () => {
     AOS.refresh()
   }, [])
   return (
-    <div data-aos="fade-left" data-aos-anchor-placement="top-center"
+    <div data-aos="fade-right" data-aos-anchor-placement="top-center"
     data-aos-duration="1000" 
     id="portafolio" className="portafolio">
       

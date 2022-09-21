@@ -26,6 +26,7 @@ const App = () => {
       <a href="#home" className="icon home-icon">
         <i class="fa-solid fa-house"></i>
       </a>
+      
     </div>
   );
 };
