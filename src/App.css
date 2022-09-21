@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
 
 :root{
-  --bg: #348cb2 url("/images/bg.jpg") bottom left;
+  --bg: #348cb2 url("/images/bg.webp") bottom left;
   --bgcolor: #348cb2;
   --txcolor: #202020;
   --boxbg: #fff;
@@ -35,7 +35,7 @@ html{
 }
 
 .dark{
-  --bg: #1e1f2b00 url("/images/bgnigth.png") bottom left;
+  --bg: #1e1f2b00 url("/images/bgnigth.webp") bottom left;
   --bgcolor: #1e1f2b;
   --txcolor: #e0e0e0;
   --boxbg: #242424;
