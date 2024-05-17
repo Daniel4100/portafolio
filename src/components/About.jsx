@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import gameData from "./game.jsx";
 
-const About = ({isDark, handleDark }) => {
+const About = ({ isDark, handleDark }) => {
   const [skillsData, setSkillsData] = useState(
     gameData.sort(() => Math.random() - 0.5)
   );
@@ -61,29 +61,27 @@ const About = ({isDark, handleDark }) => {
       </nav> */}
       <div className="about-container">
         <div className="content box1">
-          
+
           <section className="about-text">
-          
+
             <p>
-              Hola mundo, me llamo Jhener Daniel Calvache Ceballos, soy
-              colombiano y soy un desarrollador web Front-end, me gusta la
-              programación, el diseño web y el café.
+              ¡Hola! Soy Jhener Daniel Calvache Ceballos, un apasionado desarrollador web Front-end de Colombia.
+              Mi vida gira en torno a la programación, el diseño web y, por supuesto, una buena taza de café.
+              Como desarrollador, me dedico a crear experiencias digitales que no solo sean funcionales, sino también estéticamente agradables.
+              Creo firmemente que la programación es una de las herramientas más poderosas que tenemos para transformar el mundo.
             </p>
 
             <p>
-              Siempre es bueno aprender cosas nuevas y siempre es bueno ayudar a
-              los demás, y si es sobre programación mejor.
+              Elegí la programación porque siempre hay algo nuevo que aprender y nuevas maneras de resolver problemas.
+              Me motiva el hecho de que cada línea de código puede contribuir a mejorar la vida de alguien.
+              Además de mi amor por la programación, disfruto de cocinar, viajar, jugar videojuegos, ver series y películas, y escuchar música.
+              Estos intereses complementan mi vida profesional y me inspiran a ser creativo y a pensar fuera de la caja.
             </p>
 
             <p>
-              Soy fiel creyente de que la programación es una de las mejores
-              cosas que nos ha dado la humanidad, y que es una de las mejores
-              herramientas para poder cambiar el mundo.
-            </p>
-
-            <p>
-              Además me gusta cocinar, viajar, jugar videojuegos, ver series y
-              películas, y escuchar música con programación es lo mejor que hay.
+              Creo en el poder de la colaboración y el aprendizaje continuo. Ayudar a otros a entender y amar la programación tanto como yo
+              es algo que me llena de satisfacción. Estoy convencido de que la programación no solo es una habilidad técnica,
+              sino una forma de pensar y resolver problemas que puede cambiar el mundo.
             </p>
           </section>
           <section className="about-text-rigth">
@@ -118,15 +116,15 @@ const About = ({isDark, handleDark }) => {
             ) : (
               <>
                 <div className="skill html">
-                    <i className="fa-brands fa-html5"></i>
-                    <p>HTML5</p>
+                  <i className="fa-brands fa-html5"></i>
+                  <p>HTML5</p>
                 </div>
                 <div className="skill css">
-                  
-                    <i className="fa-brands fa-css3-alt"></i>
-                    <p>CSS3</p>
-                  
-                  
+
+                  <i className="fa-brands fa-css3-alt"></i>
+                  <p>CSS3</p>
+
+
                 </div>
                 <div className="skill js">
                   <i className="fa-brands fa-js-square"></i>
